@@ -22,6 +22,7 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
+//Al recargar la página ya en deploy, ésta no tendra problemas en recibir el url correspondiente
 app.get('*', (req, res) => {
     res.sendFile( __dirname + '/public/index.html' );
 });
