@@ -10,11 +10,12 @@ const {dbConenction} = require('./database/config');
 const app = express();
 //------------------------------------------------------------------------------------1----------------------------------------------------------------------------------
 
+//CORS
+app.use(cors());
+
 //Base de datos
 dbConenction();
 
-//CORS
-app.use(cors());
 
 //Directorio Público
 app.use( express.static('public'));
