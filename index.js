@@ -15,7 +15,6 @@ dbConenction();
 
 //CORS
 app.use(cors());
-app.options('*', cors());
 
 //Directorio Público
 app.use( express.static('public'));
